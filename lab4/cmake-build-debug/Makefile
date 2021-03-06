@@ -68,24 +68,13 @@ RM = /home/fail/Downloads/clion-2020.2.4/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fail/Documents/labsKNU2021_1/lab3
+CMAKE_SOURCE_DIR = /home/fail/Documents/labsKNU2021_1/lab4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fail/Documents/labsKNU2021_1/lab3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/fail/Documents/labsKNU2021_1/lab4/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/fail/Downloads/clion-2020.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -98,11 +87,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/fail/Downloads/clion-2020.2.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fail/Documents/labsKNU2021_1/lab3/cmake-build-debug/CMakeFiles /home/fail/Documents/labsKNU2021_1/lab3/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fail/Documents/labsKNU2021_1/lab4/cmake-build-debug/CMakeFiles /home/fail/Documents/labsKNU2021_1/lab4/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/fail/Documents/labsKNU2021_1/lab3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fail/Documents/labsKNU2021_1/lab4/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,98 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab3
+# Target rules for targets named lab4
 
 # Build rule for target.
-lab3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab3
-.PHONY : lab3
+lab4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab4
+.PHONY : lab4
 
 # fast build rule for target.
-lab3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/build
-.PHONY : lab3/fast
-
-lzw/bitfile.o: lzw/bitfile.cpp.o
-
-.PHONY : lzw/bitfile.o
-
-# target to build an object file
-lzw/bitfile.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/lzw/bitfile.cpp.o
-.PHONY : lzw/bitfile.cpp.o
-
-lzw/bitfile.i: lzw/bitfile.cpp.i
-
-.PHONY : lzw/bitfile.i
-
-# target to preprocess a source file
-lzw/bitfile.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/lzw/bitfile.cpp.i
-.PHONY : lzw/bitfile.cpp.i
-
-lzw/bitfile.s: lzw/bitfile.cpp.s
-
-.PHONY : lzw/bitfile.s
-
-# target to generate assembly for a file
-lzw/bitfile.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/lzw/bitfile.cpp.s
-.PHONY : lzw/bitfile.cpp.s
-
-lzw/lzwdecode.o: lzw/lzwdecode.cpp.o
-
-.PHONY : lzw/lzwdecode.o
-
-# target to build an object file
-lzw/lzwdecode.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/lzw/lzwdecode.cpp.o
-.PHONY : lzw/lzwdecode.cpp.o
-
-lzw/lzwdecode.i: lzw/lzwdecode.cpp.i
-
-.PHONY : lzw/lzwdecode.i
-
-# target to preprocess a source file
-lzw/lzwdecode.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/lzw/lzwdecode.cpp.i
-.PHONY : lzw/lzwdecode.cpp.i
-
-lzw/lzwdecode.s: lzw/lzwdecode.cpp.s
-
-.PHONY : lzw/lzwdecode.s
-
-# target to generate assembly for a file
-lzw/lzwdecode.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/lzw/lzwdecode.cpp.s
-.PHONY : lzw/lzwdecode.cpp.s
-
-lzw/lzwencode.o: lzw/lzwencode.cpp.o
-
-.PHONY : lzw/lzwencode.o
-
-# target to build an object file
-lzw/lzwencode.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/lzw/lzwencode.cpp.o
-.PHONY : lzw/lzwencode.cpp.o
-
-lzw/lzwencode.i: lzw/lzwencode.cpp.i
-
-.PHONY : lzw/lzwencode.i
-
-# target to preprocess a source file
-lzw/lzwencode.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/lzw/lzwencode.cpp.i
-.PHONY : lzw/lzwencode.cpp.i
-
-lzw/lzwencode.s: lzw/lzwencode.cpp.s
-
-.PHONY : lzw/lzwencode.s
-
-# target to generate assembly for a file
-lzw/lzwencode.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/lzw/lzwencode.cpp.s
-.PHONY : lzw/lzwencode.cpp.s
+lab4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/build
+.PHONY : lab4/fast
 
 main.o: main.cpp.o
 
@@ -230,7 +149,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -239,7 +158,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -248,7 +167,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -259,16 +178,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... lab3"
-	@echo "... lzw/bitfile.o"
-	@echo "... lzw/bitfile.i"
-	@echo "... lzw/bitfile.s"
-	@echo "... lzw/lzwdecode.o"
-	@echo "... lzw/lzwdecode.i"
-	@echo "... lzw/lzwdecode.s"
-	@echo "... lzw/lzwencode.o"
-	@echo "... lzw/lzwencode.i"
-	@echo "... lzw/lzwencode.s"
+	@echo "... lab4"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
