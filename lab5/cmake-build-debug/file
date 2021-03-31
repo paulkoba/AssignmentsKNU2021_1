@@ -1,0 +1,9 @@
+digraph {
+"0x55b4b02bddb0" [label="A -> C (6)"];
+"0x55b4b02bde40" [label="B -> B (3)"];
+"0x55b4b02bdef0" [label="C -> GG (1)"];
+"0x55b4b02bdfa0" [label="D -> dfahjk (1)"];
+"0x55b4b02bddb0" -> "0x55b4b02bde40";
+"0x55b4b02bde40" -> "0x55b4b02bdef0";
+"0x55b4b02bdef0" -> "0x55b4b02bdfa0";
+}
